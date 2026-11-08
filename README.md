@@ -46,16 +46,16 @@ If you use a different PostgreSQL username, password, host or port, use those va
 In the `server` folder, copy `.env.example` to `.env` and update the database password and JWT secret:
 
 ```env
-PORT=5000
+PORT=5173
 DATABASE_URL=postgresql://postgres:YOUR_POSTGRES_PASSWORD@localhost:5432/sweety_db
 JWT_SECRET=use_a_long_random_secret_here
-CLIENT_URL=http://localhost:5173
+CLIENT_URL=http://localhost:5175
 ```
 
 In the `client` folder, copy `.env.example` to `.env`:
 
 ```env
-VITE_API_URL=http://localhost:5000/api
+VITE_API_URL=http://localhost:5173/api
 ```
 
 Do not commit `.env` files. They are excluded by `.gitignore`.
@@ -77,7 +77,7 @@ From the project root:
 npm run dev
 ```
 
-Open the frontend at http://localhost:5173. The API runs at http://localhost:5000.
+Open the frontend at http://localhost:5175. The API runs at http://localhost:5173.
 
 The backend creates the `users` and `readings` tables automatically when it starts.
 
